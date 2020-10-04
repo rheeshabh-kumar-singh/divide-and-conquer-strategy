@@ -1,8 +1,8 @@
 
 public class MergeSort {
 	
-	static int[] A;
-	static void mergeSort(int[] arr,int p,int r)
+	int[] A;
+	void mergeSort(int[] arr,int p,int r)
 	{
 		A= arr;
 		if(p<r)
@@ -12,10 +12,12 @@ public class MergeSort {
 			mergeSort(A,q+1,r);
 			merge(A,p,q,r);
 		}
-		for(int i:A)
+		for(int i=0;i<A.length;i++)
 		{
-			System.out.print(A[i]);
+			System.out.print("{"+A[i]+"}");
+			
 		}
+		System.out.println();
 	}
 	
 	static void merge(int[] A,int p, int q, int r)
@@ -34,8 +36,8 @@ public class MergeSort {
 			R[j]=A[q+1+j];
 		}
 		
-		L[n1+1]=999999999;
-		R[n2+1]=999999999;
+		L[n1]=999999999;
+		R[n2]=999999999;
 		
 		int i=0,j=0;
 		
