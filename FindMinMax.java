@@ -25,4 +25,57 @@ public class FindMinMax {
 		System.out.println("Minimum value = "+min);
 		System.out.println("Maximum value = "+max);
 	}
+	
+	
+	void DandCminMax(int[] a,int low, int high,int min, int max)
+	{
+		if(low==high)
+		{
+			min=max=a[low];
+		}
+		else if(low==high-1)
+		{
+			if(a[low]<=a[high])
+			{
+				min=a[low];
+				max=a[high];
+			}
+			else
+			{
+				min=a[high];
+				max=a[low];
+			}	
+		}
+		else
+		{
+			if(low<high)
+			{
+				int max1=max,min1=min;
+				int mid= (low+high)/2;
+				DandCminMax(a, low,mid,min,max);
+				DandCminMax(a,mid+1,high,min1,max1);
+				if(min>min1)
+				{
+					min=min1;
+				}
+				if(max<max1)
+				{
+					max=max1;
+				}
+				
+			}
+		}
+		
+		System.out.println("Minimum value = "+min);
+		System.out.println("Maximum value = "+max);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
