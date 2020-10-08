@@ -7,12 +7,16 @@ public class DivideAndConquerStrategy {
 		FindMinMax fmm= new FindMinMax();
 		fmm.minMax(arr);
 		
-		MergeSort ms= new MergeSort();
-		ms.mergeSort(arr, 0, 9);
+		
+		fmm.DandCminMax(arr, 0, 9, 0, 0);
 		
 		
-		QuickSort quicksort=new QuickSort();
-		quicksort.quickSort(arr, 0, arr.length-1);
+//		MergeSort ms= new MergeSort();
+//		ms.mergeSort(arr, 0, 9);
+//		
+//		
+//		QuickSort quicksort=new QuickSort();
+//		quicksort.quickSort(arr, 0, arr.length-1);
 	}
 
 }
