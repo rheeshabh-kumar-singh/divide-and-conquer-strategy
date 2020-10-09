@@ -8,12 +8,23 @@ public class DivideAndConquerStrategy {
 		fmm.minMax(arr);
 		
 		
-		fmm.DandCminMax(arr, 0, 9, 0, 0);
+//		fmm.DandCminMax(arr, 0, 9, 0,0);
 		
 		
-//		MergeSort ms= new MergeSort();
-//		ms.mergeSort(arr, 0, 9);
-//		
+		MergeSort ms= new MergeSort();
+		ms.mergeSort(arr, 0, 9);
+
+		
+		for(int i=0;i<arr.length;i++)
+		{
+			System.out.print(arr[i]+",");
+		}
+		
+		BinarySearch bs= new BinarySearch();
+		int key=-1;
+		bs.binarySearch(arr, key);
+		
+		
 //		
 //		QuickSort quicksort=new QuickSort();
 //		quicksort.quickSort(arr, 0, arr.length-1);
